@@ -1,0 +1,22 @@
+8.
+12.
+P I 1.
+P I 2.
+P I 3.
+P I 4.
+P P 1.
+P P 2.
+P P 3.
+P P 4.
+Rue Barbe;P I 1;P P 3.
+Rue Minant;P P 3;P I 2.
+Rue Stique;P I 1;P I 2.
+Rue Pture;P I 2;P I 4.
+Rue Stine;P I 4;P I 3.
+Rue Gissement;P P 2;P P 4.
+Rue Scie;P P 1;P P 2.
+Rue Geole;P P 1;P I 1.
+Rue Matisme;P P 4;P I 4.
+Rue Inantique;P I 2;P I 3.
+Rue Pestre;P P 4;P I 3.
+Rue Beole;P P 4;P I 2.

@@ -1,0 +1,20 @@
+7.
+11.
+Place de Sedan.
+Place de Marseille.
+Place de Tours.
+Place de Orleans.
+Place de Brest.
+Place de Caen.
+Place de Dunkerque.
+Rue 1;Place de Sedan;Place de Marseille.
+Rue 2;Place de Sedan;Place de Dunkerque.
+Rue 3;Place de Marseille;Place de Dunkerque.
+Rue 4;Place de Marseille;Place de Tours.
+Rue 5;Place de Marseille;Place de Caen.
+Rue 6;Place de Tours;Place de Orleans.
+Rue 7;Place de Tours;Place de Caen.
+Rue 8;Place de Orleans;Place de Brest.
+Rue 9;Place de Brest;Place de Caen.
+Rue 10;Place de Caen;Place de Dunkerque.
+Rue 11;Place de Dunkerque;Place de Tours.

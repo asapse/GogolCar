@@ -1,0 +1,86 @@
+Création de la ville Impair.
+-------------------------- 
+Place Impair :P I 4
+Liste de ses rues: 
+Rue Pture
+Rue Stine
+-------------------------- 
+Place Impair :P I 3
+Liste de ses rues: 
+Rue Stine
+Rue Inantique
+-------------------------- 
+Place Impair :P I 2
+Liste de ses rues: 
+Rue Stique
+Rue Pture
+Rue Inantique
+-------------------------- 
+Place Impair :P I 1
+Liste de ses rues: 
+Rue Stique
+-------------------------- 
+-------------------------- 
+Initilisation de la matrice: 
+Matrice des Successeurs 
+P P 2 |  | P P 1 |  |  |  |  | P P 4 | 
+P P 1 | P P 2 |  |  |  |  | P I 1 |  | 
+P I 4 |  |  |  | P I 3 | P I 2 |  | P P 4 | 
+P I 3 |  |  | P I 4 |  | P I 2 |  | P P 4 | 
+P I 2 |  |  | P I 4 | P I 3 |  | P I 1 | P P 4 | P P 3
+P I 1 |  | P P 1 |  |  | P I 2 |  |  | P P 3
+P P 4 | P P 2 |  | P I 4 | P I 3 | P I 2 |  |  | 
+P P 3 |  |  |  |  | P I 2 | P I 1 |  | 
+
+Matrice des Distances 
+P P 2 | 0 | 1 | 2147483647 | 2147483647 | 2147483647 | 2147483647 | 1 | 2147483647
+P P 1 | 1 | 0 | 2147483647 | 2147483647 | 2147483647 | 1 | 2147483647 | 2147483647
+P I 4 | 2147483647 | 2147483647 | 0 | 1 | 1 | 2147483647 | 1 | 2147483647
+P I 3 | 2147483647 | 2147483647 | 1 | 0 | 1 | 2147483647 | 1 | 2147483647
+P I 2 | 2147483647 | 2147483647 | 1 | 1 | 0 | 1 | 1 | 1
+P I 1 | 2147483647 | 1 | 2147483647 | 2147483647 | 1 | 0 | 2147483647 | 1
+P P 4 | 1 | 2147483647 | 1 | 1 | 1 | 2147483647 | 0 | 2147483647
+P P 3 | 2147483647 | 2147483647 | 2147483647 | 2147483647 | 1 | 1 | 2147483647 | 0
+
+-------------------------- 
+Après Floyd-Warshall: 
+Matrice des Successeurs 
+P P 2 |  | P P 1 | ->P I 1->P P 4 | ->P I 1->P P 4 | ->P I 1->P P 4 | ->P P 1 | P P 4 | ->P I 1
+P P 1 | P P 2 |  | ->P I 1 | ->P I 1 | ->P I 1 | P I 1 | ->P P 2 | ->P I 1
+P I 4 | ->P I 1->P P 4 | ->P I 1 |  | P I 3 | P I 2 | ->P I 2 | P P 4 | ->P I 2
+P I 3 | ->P I 1->P P 4 | ->P I 1 | P I 4 |  | P I 2 | ->P I 2 | P P 4 | ->P I 2
+P I 2 | ->P I 1->P P 4 | ->P I 1 | P I 4 | P I 3 |  | P I 1 | P P 4 | P P 3
+P I 1 | ->P P 1 | P P 1 | ->P I 2 | ->P I 2 | P I 2 |  | ->P P 1->P I 2 | P P 3
+P P 4 | P P 2 | ->P P 2 | P I 4 | P I 3 | P I 2 | ->P P 1->P I 2 |  | ->P I 2
+P P 3 | ->P I 1 | ->P I 1 | ->P I 2 | ->P I 2 | P I 2 | P I 1 | ->P I 2 | 
+
+Matrice des Distances 
+P P 2 | 0 | 1 | 2 | 2 | 2 | 2 | 1 | 3
+P P 1 | 1 | 0 | 3 | 3 | 2 | 1 | 2 | 2
+P I 4 | 2 | 3 | 0 | 1 | 1 | 2 | 1 | 2
+P I 3 | 2 | 3 | 1 | 0 | 1 | 2 | 1 | 2
+P I 2 | 2 | 2 | 1 | 1 | 0 | 1 | 1 | 1
+P I 1 | 2 | 1 | 2 | 2 | 1 | 0 | 2 | 1
+P P 4 | 1 | 2 | 1 | 1 | 1 | 2 | 0 | 2
+P P 3 | 3 | 2 | 2 | 2 | 1 | 1 | 2 | 0
+
+-------------------------- 
+Couple Trouvé :P I 4 P I 3
+Couple Trouvé :P I 2 P I 1
+
+-------------------------- 
+Rue Inantique :P I 3 -> P I 2
+Rue Stique :P I 2 -> P I 1
+Places Parcourues:P I 1. Place départ et d'arrivée :P I 1 -> P I 2
+Rue Beole :P I 2 -> P P 4
+Rue Matisme :P P 4 -> P I 4
+Places Parcourues:P I 3. Place départ et d'arrivée :P I 4 -> P I 3
+Rue Pestre :P I 3 -> P P 4
+Rue Gissement :P P 4 -> P P 2
+Rue Scie :P P 2 -> P P 1
+Rue Geole :P P 1 -> P I 1
+Rue Barbe :P I 1 -> P P 3
+Rue Minant :P P 3 -> P I 2
+Rue Pture :P I 2 -> P I 4
+Rue Stine :P I 4 -> P I 3
+
